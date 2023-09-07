@@ -24,6 +24,7 @@ docker compose build web
 docker compose up -d database_default
 docker compose run web python manage.py migrate
 docker compose run web python manage.py createsuperuser
+docker compose run web python manage.py collectstatic
 docker compose up -d
 ```
 
