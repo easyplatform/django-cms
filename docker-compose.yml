@@ -5,6 +5,8 @@ services:
     # the application's web service (container) will use an image based on our Dockerfile
     build: .
     # map the host directory to app (which allows us to see and edit files inside the container)
+    ports:
+      - "8000:80"
     volumes:
       - ".:/app:rw"
       - "./data:/data:rw"
